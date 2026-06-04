@@ -126,6 +126,7 @@ layout = html.Div([
                         options=[
                             {'label': 'Eventos Organizados', 'value': 'eventos_organizados'},
                             {'label': 'Produções Técnicas ou Artísticas', 'value': 'tecnica'},
+                            {'label': 'Ano de Titulação do Doutorado', 'value': 'ano_de_conclusao'}
                         ],
                         id='filtro-outros',
                         inline=False,
@@ -298,6 +299,8 @@ def processar_resultado(n_clicks, uploaded_file_data_dict, ano_inicio, ano_termi
                 metricas_para_leitor.append('EVENTOS ORGANIZADOS')
             if 'tecnica' in outros:
                 metricas_para_leitor.append('PUB. TEC. E ART.')
+            if 'ano_de_conclusao' in outros:
+                metricas_para_leitor.append('ANO TITULACAO')
 
         metricas_para_leitor = list(set(metricas_para_leitor))
         if not metricas_para_leitor:
