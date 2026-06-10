@@ -70,11 +70,8 @@ class StorageLattes:
                     s += '=' * (4 - missing_padding)
                 return s
 
-            #ADICIONEI LOGS PARA VERIFICAÇÃO DE ERROS NO DOWNLOAD DOS ARQUIVOS XML DO LATTES
             for id_lattes in lista_ids:
-                logger.info(f"DEBUG - tentando baixar curriculo para o id: {id_lattes}")
                 resultado_base64 = cliente.service.getCurriculoCompactado(id_lattes)
-                logger.info(f"DEBUG - resposta da api para {id_lattes}: {resultado_base64}[:100] se string, type={type(resultado_base64)}")
                 nome_arquivo_zip = str(id_lattes) + ".zip"
 
                 if resultado_base64:

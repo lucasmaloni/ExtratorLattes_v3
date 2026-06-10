@@ -287,7 +287,7 @@ class Pesquisador:
             "PUB. TRAB. EVENTOS": len(self.publicacoes_trabalhos_eventos),
             "EVENTOS ORGANIZADOS": len(self.eventos_organizados),
             # "BOLSISTA": self.bolsista,
-            'ANO TITULACAO': self.ano_titulacao_doutorado,
+            'ANO_TITULACAO': self.ano_titulacao_doutorado,
             "PUBLICAÇÕES CIENTÍFICAS": len(self.publicacoes_cientificas),
         }
 

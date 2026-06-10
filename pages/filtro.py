@@ -300,7 +300,7 @@ def processar_resultado(n_clicks, uploaded_file_data_dict, ano_inicio, ano_termi
             if 'tecnica' in outros:
                 metricas_para_leitor.append('PUB. TEC. E ART.')
             if 'ano_de_conclusao' in outros:
-                metricas_para_leitor.append('ANO TITULACAO')
+                metricas_para_leitor.append('ANO_TITULACAO')
 
         metricas_para_leitor = list(set(metricas_para_leitor))
         if not metricas_para_leitor:
